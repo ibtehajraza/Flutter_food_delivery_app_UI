@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_food_delivery_ui/widgets/recent_orders.dart';
 
 import '../data/data.dart';
 
@@ -41,7 +42,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30.0),
-                    borderSide: BorderSide(width: 0.8,color: Theme.of(context).primaryColor),
+                    borderSide: BorderSide(
+                        width: 0.8, color: Theme.of(context).primaryColor),
                   ),
                   hintText: 'Search Food or Restorants',
                   prefixIcon: Icon(Icons.search),
@@ -49,6 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       IconButton(icon: Icon(Icons.clear), onPressed: () {})),
             ),
           ),
+          RecentOrders(),
         ],
       ),
     );
