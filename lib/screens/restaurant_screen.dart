@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_food_delivery_ui/widgets/rating_stars.dart';
 
 import '../models/restaurant.dart';
 
@@ -53,6 +54,80 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
               ),
             ],
           ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 20.0,
+              vertical: 30.0,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      widget.restaurant.name,
+                      style: TextStyle(
+                        fontSize: 22.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      '0.2 miles away.',
+                      style: TextStyle(
+                        fontSize: 18.0,
+                      ),
+                    )
+                  ],
+                ),
+                // Geting Ratting stars from before buit widget.
+                RatingStars(widget.restaurant.rating),
+                SizedBox(
+                  height: 6.0,
+                ),
+                Text(
+                  widget.restaurant.address,
+                  style: TextStyle(fontSize: 17.0),
+                ),
+              ],
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              FlatButton(
+                onPressed: () {},
+                padding: EdgeInsets.symmetric(horizontal: 30.0),
+                color: Theme.of(context).primaryColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                ),
+                child: Text(
+                  'Review',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+
+              FlatButton(
+                onPressed: () {},
+                padding: EdgeInsets.symmetric(horizontal: 30.0),
+                color: Theme.of(context).primaryColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                ),
+                child: Text(
+                  'Contact',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );
