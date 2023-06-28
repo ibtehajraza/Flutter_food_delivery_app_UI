@@ -1,10 +1,10 @@
 # flutter_food_delivery_ui
 
-A new Flutter project.
+This is a sample app created using google's new framework "Flutter" this is a concept app made for learning purposes. It is an open source application so code is available on GitHub and can be forked from here.
+
+- App Link: [Flutter food delivery UI](https://play.google.com/store/apps/details?id=com.ibtehaj.flutter_food_delivery_ui)
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
